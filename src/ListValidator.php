@@ -17,7 +17,7 @@ class ListValidator extends ValueValidatorObject {
 	 *
 	 * @since 0.1
 	 *
-	 * @param mixed $value
+	 * @param array $value
 	 */
 	public function doValidation( $value ) {
 		if ( !is_array( $value ) ) {
@@ -39,7 +39,7 @@ class ListValidator extends ValueValidatorObject {
 	 *
 	 * @since 0.1
 	 *
-	 * @return boolean
+	 * @return bool
 	 */
 	protected function enableWhitelistRestrictions() {
 		return false;

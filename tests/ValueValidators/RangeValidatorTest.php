@@ -2,6 +2,7 @@
 
 namespace ValueValidators\Tests;
 
+use PHPUnit_Framework_TestCase;
 use ValueValidators\RangeValidator;
 
 /**
@@ -13,7 +14,7 @@ use ValueValidators\RangeValidator;
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class RangeValidatorTest extends \PHPUnit_Framework_TestCase {
+class RangeValidatorTest extends PHPUnit_Framework_TestCase {
 
 	/**
 	 * @dataProvider withinBoundsProvider

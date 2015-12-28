@@ -2,6 +2,8 @@
 
 namespace ValueValidators;
 
+use Exception;
+
 /**
  * ValueValidator that validates a string value.
  *
@@ -17,8 +19,9 @@ class StringValidator extends ValueValidatorObject {
 	 *
 	 * @since 0.1
 	 *
-	 * @param mixed $value
-	 * @throws \Exception
+	 * @param string $value
+	 *
+	 * @throws Exception
 	 */
 	public function doValidation( $value ) {
 		if ( !is_string( $value ) ) {
@@ -54,7 +57,7 @@ class StringValidator extends ValueValidatorObject {
 			$match = preg_match( $this->options['regex'], $value );
 
 			if ( $match === false ) {
-				throw new \Exception( 'The regex argument must be a valid Perl regular expression.' );
+				throw new Exception( 'The regex argument must be a valid Perl regular expression.' );
 			} elseif ( $match === 0 ) {
 				$this->addErrorMessage( 'String does not match the regular expression ' . $this->options['regex'] );
 			}
